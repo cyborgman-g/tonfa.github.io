@@ -1,4 +1,4 @@
-# 🧠 DeepNet Toolkit
+# SoundByte – Learn, Train, Deploy: An Academic-friendly DL Toolkit for Accelerated Learning and Prototyping
 
 <div align="center">
 

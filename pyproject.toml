@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "soundbyte"
 version = "0.1.0"
-description = "A neural network training toolkit for classification tasks"
+description = "Learn, Train, Deploy: An Academic-friendly DL Toolkit for Accelerated Learning and Prototyping"
 readme = "README.md"
 authors = [{ name = "Vishal Kumar", email = "vishalku@iiitd.ac.in" }]
 requires-python = ">=3.12"
