@@ -3,38 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TorchModular - Lightweight PyTorch Toolkit</title>
-    <meta name="description" content="A lightweight, modular PyTorch toolkit for building efficient neural networks with minimal code.">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <title>Toolkit Development</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #ffeef7, #e8f4fd, #f0f8e8, #fff2e8);
+            background-size: 400% 400%;
+            animation: gradientShift 8s ease-in-out infinite;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Gaussian noise overlay */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.3) 1px, transparent 1px),
+                radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.4) 1px, transparent 1px),
+                radial-gradient(circle at 40% 60%, rgba(255, 255, 255, 0.2) 1px, transparent 1px),
+                radial-gradient(circle at 70% 20%, rgba(255, 255, 255, 0.3) 1px, transparent 1px),
+                radial-gradient(circle at 10% 80%, rgba(255, 255, 255, 0.25) 1px, transparent 1px),
+                radial-gradient(circle at 90% 40%, rgba(255, 255, 255, 0.35) 1px, transparent 1px);
+            background-size: 50px 50px, 80px 80px, 60px 60px, 70px 70px, 90px 90px, 40px 40px;
+            animation: noiseMove 15s linear infinite;
+            pointer-events: none;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        @keyframes noiseMove {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(-10px, -10px); }
+            50% { transform: translate(10px, -20px); }
+            75% { transform: translate(-20px, 10px); }
+            100% { transform: translate(0, 0); }
+        }
+        
+        .container {
+            text-align: center;
+            padding: 3rem;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            z-index: 1;
+            position: relative;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        p {
+            color: #34495e;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .progress-indicator {
+            width: 100%;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 2px;
+            overflow: hidden;
+            margin-top: 2rem;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #74b9ff, #fd79a8, #fdcb6e);
+            width: 0%;
+            border-radius: 2px;
+            animation: progressAnimation 3s ease-in-out infinite;
+        }
+        
+        @keyframes progressAnimation {
+            0% { width: 0%; }
+            50% { width: 60%; }
+            100% { width: 0%; }
+        }
+        
+        .status-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(116, 185, 255, 0.2);
+            border: 1px solid rgba(116, 185, 255, 0.4);
+            border-radius: 20px;
+            color: #2980b9;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-top: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                margin: 1rem;
+                padding: 2rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            p {
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Header -->
-    <div data-include="components/header.html"></div>
-    
-    <!-- Hero Section -->
-    <div data-include="components/hero-section.html"></div>
-    
-    <!-- Features Section -->
-    <div data-include="components/features-section.html"></div>
-    
-    <!-- Documentation Section -->
-    <div data-include="components/documentation-section.html"></div>
-    
-    <!-- Installation Section -->
-    <div data-include="components/installation-section.html"></div>
-    
-    <!-- Examples Section -->
-    <div data-include="components/examples-section.html"></div>
-    
-    <!-- Community Section -->
-    <div data-include="components/community-section.html"></div>
-    
-    <!-- Footer -->
-    <div data-include="components/footer.html"></div>
-    
-    <!-- Scripts -->
-    <script src="js/include-handler.js"></script>
-    <script src="js/main.js"></script>
+    <div class="container">
+        <h1>SoundByte Toolkit Development</h1>
+        <p>The website is updating.</p>
+        <div class="status-badge">In Progress</div>
+        <div class="progress-indicator">
+            <div class="progress-bar"></div>
+        </div>
+        <p style="font-size: 1rem; margin-top: 1.5rem; margin-bottom: 0;">We'll update you soon with exciting news!</p>
+    </div>
 </body>
 </html>
