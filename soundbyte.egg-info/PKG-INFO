@@ -1,10 +1,11 @@
 Metadata-Version: 2.4
 Name: soundbyte
-Version: 0.1.0
-Summary: A neural network training toolkit for classification tasks
+Version: 0.1.1
+Summary: Learn, Train, Deploy: An Academic-friendly DL Toolkit for Accelerated Learning and Prototyping
 Author-email: Vishal Kumar <vishalku@iiitd.ac.in>
 Requires-Python: >=3.12
 Description-Content-Type: text/markdown
+License-File: LICENSE
 Requires-Dist: torch>=2.0.0
 Requires-Dist: torchvision>=0.15.0
 Requires-Dist: torchaudio>=2.0.0
@@ -15,3 +16,10 @@ Requires-Dist: pydantic>=2.0.0
 Requires-Dist: numpy>=1.24.0
 Requires-Dist: Pillow>=9.0.0
 Requires-Dist: tqdm>=4.64.0
+Dynamic: license-file
+
+# soundbyte
+
+🚧 **This project is under development. Documentation and details will be updated soon.** 🚧
+
+Stay tuned!
