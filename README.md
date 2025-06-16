@@ -129,24 +129,24 @@ We support these elements by default.
 ### Datasets
 ```json
 {
-  'torchvision': [
-      'CIFAR10', 'CIFAR100', 'CLEVRClassification', 'CREStereo', 'Caltech101', 'Caltech256', 'CarlaStereo',
-      'CelebA', 'Cityscapes', 'CocoCaptions', 'CocoDetection', 'Country211', 'DTD', 'EMNIST',
-      'ETH3DStereo', 'EuroSAT', 'FER2013', 'FGVCAircraft', 'FakeData', 'FallingThingsStereo', 'FashionMNIST',
-      'Flickr30k', 'Flickr8k', 'Flowers102', 'FlyingChairs', 'FlyingThings3D', 'Food101', 'GTSRB',
-      'HD1K', 'HMDB51', 'INaturalist', 'ImageNet', 'Imagenette', 'InStereo2k', 'KMNIST',
-      'Kinetics', 'Kitti', 'Kitti2012Stereo', 'Kitti2015Stereo', 'KittiFlow', 'LFWPairs', 'LFWPeople',
-      'LSUN', 'LSUNClass', 'MNIST', 'Middlebury2014Stereo', 'MovingMNIST', 'Omniglot', 'OxfordIIITPet',
-      'PCAM', 'PhotoTour', 'Places365', 'QMNIST', 'RenderedSST2', 'SBDataset', 'SBU',
-      'SEMEION', 'STL10', 'SUN397', 'SVHN', 'SceneFlowStereo', 'Sintel', 'SintelStereo',
-      'StanfordCars', 'UCF101', 'USPS', 'VOCDetection', 'VOCSegmentation', 'WIDERFace'
+  "torchvision": [
+      "CIFAR10", "CIFAR100", "CLEVRClassification", "CREStereo", "Caltech101", "Caltech256", "CarlaStereo",
+      "CelebA", "Cityscapes", "CocoCaptions", "CocoDetection", "Country211", "DTD", "EMNIST",
+      "ETH3DStereo", "EuroSAT", "FER2013", "FGVCAircraft", "FakeData", "FallingThingsStereo", "FashionMNIST",
+      "Flickr30k", "Flickr8k", "Flowers102", "FlyingChairs", "FlyingThings3D", "Food101", "GTSRB",
+      "HD1K", "HMDB51", "INaturalist", "ImageNet", "Imagenette", "InStereo2k", "KMNIST",
+      "Kinetics", "Kitti", "Kitti2012Stereo", "Kitti2015Stereo", "KittiFlow", "LFWPairs", "LFWPeople",
+      "LSUN", "LSUNClass", "MNIST", "Middlebury2014Stereo", "MovingMNIST", "Omniglot", "OxfordIIITPet",
+      "PCAM", "PhotoTour", "Places365", "QMNIST", "RenderedSST2", "SBDataset", "SBU",
+      "SEMEION", "STL10", "SUN397", "SVHN", "SceneFlowStereo", "Sintel", "SintelStereo",
+      "StanfordCars", "UCF101", "USPS", "VOCDetection", "VOCSegmentation", "WIDERFace"
       ],
     
-    'torchaudio': [
-      'CMUARCTIC', 'CMUDict', 'COMMONVOICE', 'DR_VCTK', 'FluentSpeechCommands', 'GTZAN', 'IEMOCAP',
-      'LIBRISPEECH', 'LIBRITTS', 'LJSPEECH', 'LibriLightLimited', 'LibriMix', 'LibriSpeechBiasing', 'MUSDB_HQ',
-      'QUESST14', 'SPEECHCOMMANDS', 'Snips', 'TEDLIUM', 'VCTK_092', 'VoxCeleb1Identification', 'VoxCeleb1Verification', 
-      'YESNO'
+    "torchaudio": [
+      "CMUARCTIC", "CMUDict", "COMMONVOICE", "DR_VCTK", "FluentSpeechCommands", "GTZAN", "IEMOCAP",
+      "LIBRISPEECH", "LIBRITTS", "LJSPEECH", "LibriLightLimited", "LibriMix", "LibriSpeechBiasing", "MUSDB_HQ",
+      "QUESST14", "SPEECHCOMMANDS", "Snips", "TEDLIUM", "VCTK_092", "VoxCeleb1Identification", "VoxCeleb1Verification", 
+      "YESNO"
       ]
   }
 ```
@@ -167,38 +167,38 @@ Example dataset element of config.json for SPEECHCOMMAND Dataset
 ### Models
 ```json
 {
-  'torchvision': [
-    'alexnet', 'convnext_base', 'convnext_large', 'convnext_small', 'convnext_tiny', 'deeplabv3_mobilenet_v3_large', 'deeplabv3_resnet101',
-    'deeplabv3_resnet50', 'densenet121', 'densenet161', 'densenet169', 'densenet201', 'efficientnet_b0', 'efficientnet_b1',
-    'efficientnet_b2', 'efficientnet_b3', 'efficientnet_b4', 'efficientnet_b5', 'efficientnet_b6', 'efficientnet_b7', 'efficientnet_v2_l',
-    'efficientnet_v2_m', 'efficientnet_v2_s', 'fasterrcnn_mobilenet_v3_large_320_fpn', 'fasterrcnn_mobilenet_v3_large_fpn', 'fasterrcnn_resnet50_fpn', 'fasterrcnn_resnet50_fpn_v2', 'fcn_resnet101', 
-    'fcn_resnet50', 'fcos_resnet50_fpn', 'googlenet', 'inception_v3', 'keypointrcnn_resnet50_fpn', 'lraspp_mobilenet_v3_large', 'maskrcnn_resnet50_fpn', 
-    'maskrcnn_resnet50_fpn_v2', 'maxvit_t', 'mc3_18', 'mnasnet0_5', 'mnasnet0_75', 'mnasnet1_0', 'mnasnet1_3', 
-    'mobilenet_v2', 'mobilenet_v3_large', 'mobilenet_v3_small', 'mvit_v1_b', 'mvit_v2_s', 'quantized_googlenet', 'quantized_inception_v3', 
-    'quantized_mobilenet_v2', 'quantized_mobilenet_v3_large', 'quantized_resnet18', 'quantized_resnet50', 'quantized_resnext101_32x8d', 'quantized_resnext101_64x4d', 'quantized_shufflenet_v2_x0_5',
-    'quantized_shufflenet_v2_x1_0', 'quantized_shufflenet_v2_x1_5', 'quantized_shufflenet_v2_x2_0', 'r2plus1d_18', 'r3d_18', 'raft_large', 'raft_small', 
-    'regnet_x_16gf', 'regnet_x_1_6gf', 'regnet_x_32gf', 'regnet_x_3_2gf', 'regnet_x_400mf', 'regnet_x_800mf', 'regnet_x_8gf',
-    'regnet_y_128gf', 'regnet_y_16gf', 'regnet_y_1_6gf', 'regnet_y_32gf', 'regnet_y_3_2gf', 'regnet_y_400mf', 'regnet_y_800mf', 
-    'regnet_y_8gf', 'resnet101', 'resnet152', 'resnet18', 'resnet34', 'resnet50', 'resnext101_32x8d', 
-    'resnext101_64x4d', 'resnext50_32x4d', 'retinanet_resnet50_fpn', 'retinanet_resnet50_fpn_v2', 's3d', 'shufflenet_v2_x0_5', 'shufflenet_v2_x1_0', 
-    'shufflenet_v2_x1_5', 'shufflenet_v2_x2_0', 'squeezenet1_0', 'squeezenet1_1', 'ssd300_vgg16', 'ssdlite320_mobilenet_v3_large', 'swin3d_b', 
-    'swin3d_s', 'swin3d_t', 'swin_b', 'swin_s', 'swin_t', 'swin_v2_b', 'swin_v2_s', 
-    'swin_v2_t', 'vgg11', 'vgg11_bn', 'vgg13', 'vgg13_bn', 'vgg16', 'vgg16_bn', 
-    'vgg19', 'vgg19_bn', 'vit_b_16', 'vit_b_32', 'vit_h_14', 'vit_l_16', 'vit_l_32', 
-    'wide_resnet101_2', 'wide_resnet50_2'
+  "torchvision": [
+    "alexnet", "convnext_base", "convnext_large", "convnext_small", "convnext_tiny", "deeplabv3_mobilenet_v3_large", "deeplabv3_resnet101",
+    "deeplabv3_resnet50", "densenet121", "densenet161", "densenet169", "densenet201", "efficientnet_b0", "efficientnet_b1",
+    "efficientnet_b2", "efficientnet_b3", "efficientnet_b4", "efficientnet_b5", "efficientnet_b6", "efficientnet_b7", "efficientnet_v2_l",
+    "efficientnet_v2_m", "efficientnet_v2_s", "fasterrcnn_mobilenet_v3_large_320_fpn", "fasterrcnn_mobilenet_v3_large_fpn", "fasterrcnn_resnet50_fpn", "fasterrcnn_resnet50_fpn_v2", "fcn_resnet101", 
+    "fcn_resnet50", "fcos_resnet50_fpn", "googlenet", "inception_v3", "keypointrcnn_resnet50_fpn", "lraspp_mobilenet_v3_large", "maskrcnn_resnet50_fpn", 
+    "maskrcnn_resnet50_fpn_v2", "maxvit_t", "mc3_18", "mnasnet0_5", "mnasnet0_75", "mnasnet1_0", "mnasnet1_3", 
+    "mobilenet_v2", "mobilenet_v3_large", "mobilenet_v3_small", "mvit_v1_b", "mvit_v2_s", "quantized_googlenet", "quantized_inception_v3", 
+    "quantized_mobilenet_v2", "quantized_mobilenet_v3_large", "quantized_resnet18", "quantized_resnet50", "quantized_resnext101_32x8d", "quantized_resnext101_64x4d", "quantized_shufflenet_v2_x0_5",
+    "quantized_shufflenet_v2_x1_0", "quantized_shufflenet_v2_x1_5", "quantized_shufflenet_v2_x2_0", "r2plus1d_18", "r3d_18", "raft_large", "raft_small", 
+    "regnet_x_16gf", "regnet_x_1_6gf", "regnet_x_32gf", "regnet_x_3_2gf", "regnet_x_400mf", "regnet_x_800mf", "regnet_x_8gf",
+    "regnet_y_128gf", "regnet_y_16gf", "regnet_y_1_6gf", "regnet_y_32gf", "regnet_y_3_2gf", "regnet_y_400mf", "regnet_y_800mf", 
+    "regnet_y_8gf", "resnet101", "resnet152", "resnet18", "resnet34", "resnet50", "resnext101_32x8d", 
+    "resnext101_64x4d", "resnext50_32x4d", "retinanet_resnet50_fpn", "retinanet_resnet50_fpn_v2", "s3d", "shufflenet_v2_x0_5", "shufflenet_v2_x1_0", 
+    "shufflenet_v2_x1_5", "shufflenet_v2_x2_0", "squeezenet1_0", "squeezenet1_1", "ssd300_vgg16", "ssdlite320_mobilenet_v3_large", "swin3d_b", 
+    "swin3d_s", "swin3d_t", "swin_b", "swin_s", "swin_t", "swin_v2_b", "swin_v2_s", 
+    "swin_v2_t", "vgg11", "vgg11_bn", "vgg13", "vgg13_bn", "vgg16", "vgg16_bn", 
+    "vgg19", "vgg19_bn", "vit_b_16", "vit_b_32", "vit_h_14", "vit_l_16", "vit_l_32", 
+    "wide_resnet101_2", "wide_resnet50_2"
     ],
     
-  'torchaudio_models': [
-    'Conformer', 'ConvTasNet', 'DeepSpeech', 'Emformer', 'HDemucs', 'HuBERTPretrainModel', 'RNNT',
-    'RNNTBeamSearch', 'SquimObjective', 'SquimSubjective', 'Tacotron2', 'Wav2Letter', 'Wav2Vec2Model', 'WaveRNN'
+  "torchaudio_models": [
+    "Conformer", "ConvTasNet", "DeepSpeech", "Emformer", "HDemucs", "HuBERTPretrainModel", "RNNT",
+    "RNNTBeamSearch", "SquimObjective", "SquimSubjective", "Tacotron2", "Wav2Letter", "Wav2Vec2Model", "WaveRNN"
     ],
   
-  'torchaudio_pipelines': [
-    'CONVTASNET_BASE_LIBRI2MIX', 'HDEMUCS_HIGH_MUSDB', 'HDEMUCS_HIGH_MUSDB_PLUS', 'HUBERT_ASR_LARGE', 'HUBERT_ASR_XLARGE', 'HUBERT_BASE', 'HUBERT_LARGE', 
-    'HUBERT_XLARGE', 'MMS_FA', 'SQUIM_OBJECTIVE', 'SQUIM_SUBJECTIVE', 'VOXPOPULI_ASR_BASE_10K_DE', 'VOXPOPULI_ASR_BASE_10K_EN', 'VOXPOPULI_ASR_BASE_10K_ES', 
-    'VOXPOPULI_ASR_BASE_10K_FR', 'VOXPOPULI_ASR_BASE_10K_IT', 'WAV2VEC2_ASR_BASE_100H', 'WAV2VEC2_ASR_BASE_10M', 'WAV2VEC2_ASR_BASE_960H', 'WAV2VEC2_ASR_LARGE_100H', 'WAV2VEC2_ASR_LARGE_10M', 
-    'WAV2VEC2_ASR_LARGE_960H', 'WAV2VEC2_ASR_LARGE_LV60K_100H', 'WAV2VEC2_ASR_LARGE_LV60K_10M', 'WAV2VEC2_ASR_LARGE_LV60K_960H', 'WAV2VEC2_BASE', 'WAV2VEC2_LARGE', 'WAV2VEC2_LARGE_LV60K', 
-    'WAV2VEC2_XLSR53', 'WAV2VEC2_XLSR_1B', 'WAV2VEC2_XLSR_2B', 'WAV2VEC2_XLSR_300M', 'WAVLM_BASE', 'WAVLM_BASE_PLUS', 'WAVLM_LARGE'
+  "torchaudio_pipelines": [
+    "CONVTASNET_BASE_LIBRI2MIX", "HDEMUCS_HIGH_MUSDB", "HDEMUCS_HIGH_MUSDB_PLUS", "HUBERT_ASR_LARGE", "HUBERT_ASR_XLARGE", "HUBERT_BASE", "HUBERT_LARGE", 
+    "HUBERT_XLARGE", "MMS_FA", "SQUIM_OBJECTIVE", "SQUIM_SUBJECTIVE", "VOXPOPULI_ASR_BASE_10K_DE", "VOXPOPULI_ASR_BASE_10K_EN", "VOXPOPULI_ASR_BASE_10K_ES", 
+    "VOXPOPULI_ASR_BASE_10K_FR", "VOXPOPULI_ASR_BASE_10K_IT", "WAV2VEC2_ASR_BASE_100H", "WAV2VEC2_ASR_BASE_10M", "WAV2VEC2_ASR_BASE_960H", "WAV2VEC2_ASR_LARGE_100H", "WAV2VEC2_ASR_LARGE_10M", 
+    "WAV2VEC2_ASR_LARGE_960H", "WAV2VEC2_ASR_LARGE_LV60K_100H", "WAV2VEC2_ASR_LARGE_LV60K_10M", "WAV2VEC2_ASR_LARGE_LV60K_960H", "WAV2VEC2_BASE", "WAV2VEC2_LARGE", "WAV2VEC2_LARGE_LV60K", 
+    "WAV2VEC2_XLSR53", "WAV2VEC2_XLSR_1B", "WAV2VEC2_XLSR_2B", "WAV2VEC2_XLSR_300M", "WAVLM_BASE", "WAVLM_BASE_PLUS", "WAVLM_LARGE"
     ]
   }
 ```
@@ -218,18 +218,18 @@ In "parameters" element you can add model specific parameters.
 ### Loss-Functions
 ```json
 {
-  'regression': [
-    'GaussianNLLLoss', 'HuberLoss', 'L1Loss', 'MSELoss', 'PoissonNLLLoss', 'SmoothL1Loss'
+  "regression": [
+    "GaussianNLLLoss", "HuberLoss", "L1Loss", "MSELoss", "PoissonNLLLoss", "SmoothL1Loss"
     ],
-  'classification': [
-    'BCELoss', 'BCEWithLogitsLoss', 'CrossEntropyLoss', 'MultiLabelMarginLoss', 'MultiLabelSoftMarginLoss', 'MultiMarginLoss', 'NLLLoss',
-    'SoftMarginLoss'
+  "classification": [
+    "BCELoss", "BCEWithLogitsLoss", "CrossEntropyLoss", "MultiLabelMarginLoss", "MultiLabelSoftMarginLoss", "MultiMarginLoss", "NLLLoss",
+    "SoftMarginLoss"
     ],
-  'ranking': [
-    'CosineEmbeddingLoss', 'HingeEmbeddingLoss', 'MarginRankingLoss', 'TripletMarginLoss', 'TripletMarginWithDistanceLoss'
+  "ranking": [
+    "CosineEmbeddingLoss", "HingeEmbeddingLoss", "MarginRankingLoss", "TripletMarginLoss", "TripletMarginWithDistanceLoss"
     ], 
-  'other': [
-    'AdaptiveLogSoftmaxWithLoss', 'CTCLoss', 'KLDivLoss', 'NLLLoss2d'
+  "other": [
+    "AdaptiveLogSoftmaxWithLoss", "CTCLoss", "KLDivLoss", "NLLLoss2d"
     ]
 }
 ```
@@ -249,13 +249,13 @@ In "parameters" element you can add loss-function specific parameters.
 ```json
 {
   "optimizers": [
-    'ASGD', 'Adadelta', 'Adafactor', 'Adagrad', 'Adam', 'AdamW', 'Adamax', 
-    'LBFGS', 'NAdam', 'Optimizer', 'RAdam', 'RMSprop', 'Rprop', 'SGD', 
-    'SparseAdam'
+    "ASGD", "Adadelta", "Adafactor", "Adagrad", "Adam", "AdamW", "Adamax", 
+    "LBFGS", "NAdam", "Optimizer", "RAdam", "RMSprop", "Rprop", "SGD", 
+    "SparseAdam"
     ],
   "schedulers": [
-    'ChainedScheduler', 'ConstantLR', 'CosineAnnealingLR', 'CosineAnnealingWarmRestarts', 'CyclicLR', 'ExponentialLR', 'LRScheduler', 'LambdaLR', 'LinearLR', 'MultiStepLR', 'MultiplicativeLR', 'OneCycleLR', 'Optimizer', 'PolynomialLR', 
-    'ReduceLROnPlateau', 'SequentialLR', 'StepLR', '_LRScheduler'
+    "ChainedScheduler", "ConstantLR", "CosineAnnealingLR", "CosineAnnealingWarmRestarts", "CyclicLR", "ExponentialLR", "LRScheduler", "LambdaLR", "LinearLR", "MultiStepLR", "MultiplicativeLR", "OneCycleLR", "Optimizer", "PolynomialLR", 
+    "ReduceLROnPlateau", "SequentialLR", "StepLR", "_LRScheduler"
     ]
   }
 ```
@@ -275,37 +275,12 @@ Example loss-function element of config.json for CrossEntropyLoss
 ```
 In "parameters" element you can add optimizer/scheduler specific parameters. If name not provided for ["scheduler"]["name/codefile"] toolkit will load ReduceLROnPlateau by default with default parameters.
 
-<style>
-@keyframes vividGlow {
-  0% {
-    box-shadow: 0 0 10px rgba(139, 195, 74, 0.6);
-  }
-  50% {
-    box-shadow: 0 0 20px rgba(139, 195, 74, 0.95);
-  }
-  100% {
-    box-shadow: 0 0 10px rgba(139, 195, 74, 0.6);
-  }
-}
-.vivid-glow {
-  animation: vividGlow 1.5s ease-in-out infinite;
-  transition: all 0.3s ease-in-out;
-}
-</style>
-
-<blockquote class="vivid-glow" style="border-left: 4px solid #8BC34A; padding: 0.75em 1em; background: #fcfcfc;">
-  <p style="margin: 0; font-size: 1.05em;">
-    💡 <strong style="color:#558B2F;">Toolkit Expansion Underway</strong><br>
-    <span style="color:#6D4C41;">We’re adding support for new</span>  
-    <span style="color:#4FC3F7;"><strong>architectures</strong></span>,  
-    <span style="color:#BA68C8;"><strong>datasets</strong></span>,  
-    <span style="color:#FFB74D;"><strong>loss functions</strong></span>,  
-    <span style="color:#FF7043;"><strong>optimizers</strong></span>, and  
-    <span style="color:#4DB6AC;"><strong>schedulers</strong></span> —  
-    <em style="color:#3E2723;">beyond standard PyTorch</em> to enhance research flexibility.
-  </p>
+<blockquote>
+  💡 <strong>Toolkit Expansion Underway</strong><br>
+  We’re adding support for new <strong>architectures</strong>, <strong>datasets</strong>, 
+  <strong>loss functions</strong>, <strong>optimizers</strong>, and 
+  <strong>schedulers</strong> — beyond standard PyTorch to enhance research flexibility.
 </blockquote>
-
 ---
 
 
@@ -316,35 +291,12 @@ soundbyte_supervised_classification --json_config /path-to-config.json
 ```
 By running the above command with your desired configuration file, you can train any model on any dataset using custom loss functions, optimizers, and schedulers—all within the scope of supervised classification.
 
-<style>
-@keyframes softPulse {
-  0% {
-    box-shadow: 0 0 8px rgba(76, 175, 80, 0.4);
-  }
-  50% {
-    box-shadow: 0 0 16px rgba(76, 175, 80, 0.85);
-  }
-  100% {
-    box-shadow: 0 0 8px rgba(76, 175, 80, 0.4);
-  }
-}
-.soft-pulse {
-  animation: softPulse 3s ease-in-out infinite;
-  transition: all 0.3s ease-in-out;
-}
-</style>
-
-<blockquote class="soft-pulse" style="border-left: 4px solid #4CAF50; padding: 0.5em 1em; background: #f9f9f9;">
-  <p style="margin: 0; font-size: 1.05em;">
-    💡 <strong style="color:#2E7D32;">Toolkit Expansion Underway</strong><br>
-    <span style="color:#555;">
-      We're in progress of implementing a growing set of 
-      <strong style="color:#4FC3F7;">plug-and-play tasks</strong> out of the box.  
-      For custom tasks, you can seamlessly extend functionality by defining your own 
-      <strong style="color:#BA68C8;">minibatch_logic</strong> directly in the JSON configuration.
-    </span>  
-  </p>
+<blockquote>
+  💡 <strong>Toolkit Expansion Underway</strong><br>
+  We're currently implementing a growing set of <strong>plug-and-play tasks</strong> out of the box.<br>
+  For custom tasks, define your own <strong>minibatch_logic</strong> directly in the JSON configuration.
 </blockquote>
+
 
 ---
 
