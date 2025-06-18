@@ -3,38 +3,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TorchModular - Lightweight PyTorch Toolkit</title>
-    <meta name="description" content="A lightweight, modular PyTorch toolkit for building efficient neural networks with minimal code.">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <title>SoundByte Documentation</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header -->
-    <div data-include="components/header.html"></div>
+    <div class="test-notice">This is Testing website - major update of website is coming soon</div>
     
-    <!-- Hero Section -->
-    <div data-include="components/hero-section.html"></div>
-    
-    <!-- Features Section -->
-    <div data-include="components/features-section.html"></div>
-    
-    <!-- Documentation Section -->
-    <div data-include="components/documentation-section.html"></div>
-    
-    <!-- Installation Section -->
-    <div data-include="components/installation-section.html"></div>
-    
-    <!-- Examples Section -->
-    <div data-include="components/examples-section.html"></div>
-    
-    <!-- Community Section -->
-    <div data-include="components/community-section.html"></div>
-    
-    <!-- Footer -->
-    <div data-include="components/footer.html"></div>
-    
-    <!-- Scripts -->
-    <script src="js/include-handler.js"></script>
-    <script src="js/main.js"></script>
+    <div class="exciting-recipes">
+        <div class="card">
+            <div class="card__body">
+                <h4>Exciting recipes coming soon!</h4>
+                <p class="m-0">Our team is working on more examples and use cases for you.</p>
+            </div>
+        </div>
+    </div>
+
+    <header class="site-header">
+        <div class="container">
+            <h1 class="site-title">SoundByte - Learn, Train, Deploy: An Academic-friendly DL Toolkit for Accelerated Learning and Prototyping</h1>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#documentation">Documentation</a></li>
+                    <li><a href="#beginner">Beginner</a></li>
+                    <li><a href="#intermediate">Intermediate</a></li>
+                    <li><a href="#advanced">Advanced</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="progress-container">
+        <div class="progress-bar" id="readingProgress"></div>
+    </div>
+
+    <main class="container">
+        <section id="introduction" class="section">
+            <h2>Introduction</h2>
+            <p>This is a Python-based deep learning toolkit designed to lower the entry barrier for students and early-stage researchers, particularly in speech and speaker-related fields. Built on PyTorch, the toolkit emphasizes simplicity and modularity, offering plug-and-play components for quick experimentation. A key feature is its collection of ready-to-use recipes for widely used datasets and tasks, allowing users to get started without wrestling with complex configurations. With built-in support for scalable training from single GPUs to large-scale multi-node systems and an integrated dashboard for real-time monitoring, the toolkit enables smooth progression from learning to research-grade experimentation, bridging the gap between educational use and advanced deep learning workflows.</p>
+        </section>
+
+        <section id="documentation" class="section">
+            <h2>Documentation</h2>
+            <p>This isn't your typical deep learning toolkit. You don't need to read through every class and function just to get started. We provide solid, customizable boilerplates so you can dive right into experimentation. Whether you're tuning training loops or testing inference pipelines, our goal is to let you focus on the deep learning, not the boilerplate. We handle the setup. You handle the science.</p>
+        </section>
+
+        <section id="beginner" class="section">
+            <h2>Beginner (Naïve learning rate)</h2>
+            <p>Just starting out. Lots of trial, lots of error, mostly error. Start here if you're new to deep learning or just want to plug in some code and see what happens.</p>
+            
+            <div class="collapsible-section">
+                <div class="collapsible-header">
+                    <h3>Beginner Guide</h3>
+                    <button class="btn btn--sm toggle-btn">Expand</button>
+                </div>
+                <div class="collapsible-content">
+                    <p>Welcome to your first steps into deep learning — where the terminology is confusing, the code is buggy, but the results can be magical (eventually). You're probably wondering: 'How do I even train a neural network?' Great question! To train a deep learning model, you'll need five essential components. Each one plays a key role in the machine learning pipeline:</p>
+                    
+                    <div class="component-container">
+                        <div class="component-card">
+                            <h4>1. Dataset</h4>
+                            <p>Your model's food. A structured collection of input samples and corresponding targets (labels). Examples include image datasets like MNIST, CIFAR-10, or custom CSV files.</p>
+                            <p><strong>Importance:</strong> Garbage in, garbage out. A clean, well-labeled dataset is critical to good model performance.</p>
+                            <ul>
+                                <li>Inputs: Features like pixel values, word embeddings, etc.</li>
+                                <li>Targets: What the model is expected to predict.</li>
+                            </ul>
+                        </div>
+
+                        <div class="component-card">
+                            <h4>2. Model / Architecture / Network</h4>
+                            <p>The brain of your operation — a neural network made of layers, activations, and parameters that maps inputs to outputs.</p>
+                            <p><strong>Examples:</strong></p>
+                            <ul>
+                                <li>Convolutional Neural Networks (CNNs) for image tasks</li>
+                                <li>Transformers for sequence tasks</li>
+                                <li>Fully Connected (Dense) Networks for structured data</li>
+                            </ul>
+                        </div>
+
+                        <div class="component-card">
+                            <h4>3. Loss Function / Criterion</h4>
+                            <p>Also known as the punisher. This function tells the model how wrong its predictions were, and generates gradients (some good stuff) to help improve next time.</p>
+                            <p><strong>Examples:</strong></p>
+                            <ul>
+                                <li>CrossEntropyLoss – for classification</li>
+                                <li>MSELoss – for regression</li>
+                                <li>BCEWithLogitsLoss – for binary classification</li>
+                            </ul>
+                        </div>
+
+                        <div class="component-card">
+                            <h4>4. Optimizers and Schedulers</h4>
+                            <p>The dynamic duo behind model improvement. Together, they fine-tune your model's parameters using gradient signals and control how fast (or slow) the learning process should move.</p>
+                            
+                            <div class="sub-component">
+                                <h5>Optimizers</h5>
+                                <p>The weight adjusters. After the model makes a mistake, the optimizer uses the gradients (from backpropagation) to tweak the model's parameters — nudging it in the direction of 'less wrong.'</p>
+                                <ul>
+                                    <li>SGD – Stochastic Gradient Descent. Simple, reliable, no frills. Works best with careful tuning.</li>
+                                    <li>Adam – Adaptive Moment Estimation. Combines momentum + adaptive learning. A go-to choice for most cases.</li>
+                                    <li>RMSprop – Great for non-stationary objectives (like RNNs).</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="sub-component">
+                                <h5>Schedulers</h5>
+                                <p>The learning rate commanders. These adjust the learning rate over time — because sometimes your model needs to take big bold steps, and sometimes tiny surgical ones.</p>
+                                <ul>
+                                    <li>StepLR – Reduces the learning rate every few epochs.</li>
+                                    <li>ReduceLROnPlateau – Watches a metric (like validation loss) and reduces the LR if it stops improving.</li>
+                                    <li>CosineAnnealingLR – Starts high, drops smoothly, then warms up again. (It's like yoga for your learning rate.)</li>
+                                </ul>
+                            </div>
+                            
+                            <p><strong>Pro Tip:</strong> Pairing the right optimizer with a well-timed scheduler can turn a struggling model into a star performer. Don't underestimate these two — they're your backstage crew for training success.</p>
+                        </div>
+
+                        <div class="component-card">
+                            <h4>5. Metrics</h4>
+                            <p>The scoreboard. While the loss helps train the model, metrics help you evaluate its performance for your specific task.</p>
+                            <p><strong>Examples:</strong></p>
+                            <ul>
+                                <li>Accuracy – for classification</li>
+                                <li>Precision/Recall/F1-score – for imbalanced data</li>
+                                <li>IoU / Dice coefficient – for segmentation tasks</li>
+                            </ul>
+                            <p><strong>Note:</strong> Metrics are not involved in training but help in model validation and early stopping.</p>
+                            <p><strong>Pro Tip:</strong> Don't get stuck in theory. Use a toy dataset, run a few training epochs, and break things. You'll learn faster that way. then build up to theory</p>
+                        </div>
+                    </div>
+
+                    <div class="tutorial-section">
+                        <h4>Tutorial: Getting Started with SoundByte</h4>
+                        <p>In our toolkit you can directly run experiments with a simple JSON configuration file, we support all architectures/datasets/loss-functions/optimizers & schedulers which PyTorch has to offer, we also support some basic metrics. Here is a step by step tutorial for training resnet18 on MNIST with CrossEntropyLoss, SGD optimizer and ReduceLRonPlateau scheduler:</p>
+                        <ol>
+                            <li>Install our toolkit by running 'pip install soundbyte' in terminal.</li>
+                            <li>Create a 'config.json' and fill in these configurations</li>
+                            <li>Run 'soundbyte_supervised_classification --json_config path-to-your-config.json'</li>
+                        </ol>
+                        
+                        <div class="code-container">
+                            <div class="code-header">
+                                <span>config.json</span>
+                                <button class="btn btn--sm copy-btn" id="copyJsonBtn">Copy</button>
+                            </div>
+                            <pre><code id="jsonConfig">{
+  "experiment_name": "My First DL Model",
+  "dataset": {
+    "name/codefile": "MNIST",
+    "validation": false,
+    "parameters": {
+      "root": "path where you want to download data",
+      "download": true,
+      "train": true
+    }
+  },
+  "architecture": {
+    "name/codefile": "resnet18",
+    "parameters": {
+      "pretrained": false
+    }
+  },
+  "loss_function": {
+    "name/codefile": "CrossEntropyLoss",
+    "train": false,
+    "parameters": {}
+  },
+  "optimizer": {
+    "name/codefile": "SGD",
+    "parameters": {
+      "momentum": 0.89
+    }
+  },
+  "scheduler": {
+    "name/codefile": "",
+    "parameters": {}
+  },
+  "train_minibatch_logic": {
+    "name/codefile": "supervised_classification_train"
+  },
+  "valid_minibatch_logic": {
+    "name/codefile": "supervised_classification_eval"
+  },
+  "training": {
+    "epochs": 120,
+    "batchsize": 48,
+    "num_workers": 2,
+    "metric": "accuracy",
+    "mgpu": false,
+    "gpu": 1,
+    "num_gpus": 3,
+    "log_minibatchstats_after": 10
+  }
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="intermediate" class="section">
+            <h2>Intermediate (Adaptive learning rate)</h2>
+            <p>You've moved past the basics. You're tuning hyperparameters, experimenting with architectures, and maybe even reading a loss curve or two for fun.</p>
+            
+            <div class="update-in-progress">
+                <div class="update-text">Update in progress</div>
+                <div class="loading-bar-container">
+                    <div class="loading-bar"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="advanced" class="section">
+            <h2>Advanced (Scheduled Decay learning rate)</h2>
+            <p>You understand training dynamics deeply. Custom schedulers, gradient clipping, and distributed training don't scare you — you've probably written your own utilities by now.</p>
+            
+            <div class="update-in-progress">
+                <div class="update-text">Update in progress</div>
+                <div class="loading-bar-container">
+                    <div class="loading-bar"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 SoundByte Documentation</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
 </body>
 </html>
