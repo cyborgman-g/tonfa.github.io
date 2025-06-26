@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Installation - SoundByte</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="animated-background"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="../index.html"><h2>SoundByte</h2></a>
+            </div>
+            <div class="nav-menu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="installation.html" class="nav-link active">Installation</a>
+                <a href="quickstart.html" class="nav-link">Quick Start</a>
+                <a href="cli.html" class="nav-link">CLI</a>
+                <a href="components.html" class="nav-link">Components</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="page-header">
+                <h1>Installation Guide</h1>
+                <p class="page-description">Get SoundByte up and running on your system</p>
+            </div>
+
+            <div class="content-section">
+                <h2>Prerequisites</h2>
+                <ul class="feature-list">
+                    <li>Python 3.8 or higher</li>
+                    <li>conda (for environment management)</li>
+                    <li>CUDA-compatible GPU (optional, for GPU acceleration)</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Setup Instructions</h2>
+
+                <div class="step-item">
+                    <h3>1. Extract and Navigate</h3>
+                    <div class="code-block">
+                        <code>unzip soundbyte_toolkit.zip
+cd soundbyte_toolkit_build</code>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <h3>2. Create Conda Environment</h3>
+                    <div class="code-block">
+                        <code>conda create -n soundbyte python=3.8
+conda activate soundbyte</code>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <h3>3. Install Dependencies</h3>
+                    <div class="code-block">
+                        <code>pip install -r requirements.txt</code>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <h3>4. Install the Toolkit</h3>
+                    <div class="code-block">
+                        <code>pip install -e .</code>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <h3>5. Verify Installation</h3>
+                    <div class="code-block">
+                        <code>soundbyte list-components</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../app.js"></script>
+</body>
+</html>

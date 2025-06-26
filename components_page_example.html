@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Components - SoundByte</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="animated-background"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="../index.html"><h2>SoundByte</h2></a>
+            </div>
+            <div class="nav-menu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="installation.html" class="nav-link">Installation</a>
+                <a href="quickstart.html" class="nav-link">Quick Start</a>
+                <a href="cli.html" class="nav-link">CLI</a>
+                <a href="components.html" class="nav-link active">Components</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="page-header">
+                <h1>Available Components</h1>
+                <p class="page-description">Complete reference of all SoundByte components</p>
+            </div>
+
+            <div class="content-section">
+                <h2>Data Operations</h2>
+                <div class="component-grid">
+                    <div class="component-card">
+                        <h3>cifar10</h3>
+                        <p>CIFAR-10 dataset with preprocessing and data augmentation support</p>
+                    </div>
+                    <div class="component-card">
+                        <h3>mnist</h3>
+                        <p>MNIST dataset with normalization and batch processing</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Model Operations</h2>
+                <div class="component-grid">
+                    <div class="component-card">
+                        <h3>simple_convnet</h3>
+                        <p>Lightweight CNN architecture for image classification</p>
+                    </div>
+                    <div class="component-card">
+                        <h3>resnet18</h3>
+                        <p>ResNet-18 deep residual network</p>
+                    </div>
+                    <div class="component-card">
+                        <h3>vgg16</h3>
+                        <p>VGG-16 convolutional neural network</p>
+                    </div>
+                    <div class="component-card">
+                        <h3>mobilenet_v2</h3>
+                        <p>Efficient MobileNet V2 architecture</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Penalty Operations</h2>
+                <div class="component-grid">
+                    <div class="component-card">
+                        <h3>cross_entropy</h3>
+                        <p>Standard cross-entropy loss for classification</p>
+                    </div>
+                    <div class="component-card">
+                        <h3>focal_loss</h3>
+                        <p>Focal loss for addressing class imbalance</p>
+                    </div>
+                    <div class="component-card">
+                        <h3>knowledge_distillation</h3>
+                        <p>KL divergence-based teacher-student distillation loss</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../app.js"></script>
+</body>
+</html>
