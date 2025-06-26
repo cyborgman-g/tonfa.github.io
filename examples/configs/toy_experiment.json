@@ -1,0 +1,62 @@
+{
+  "name": "comprehensive_toy_experiment",
+  "seed": 42,
+  "device": "auto",
+  "data_ops": {
+    "name": "mnist",
+    "params": {
+      "batch_size": 32,
+      "num_workers": 1,
+      "download": true,
+      "data_dir": "./data"
+    },
+    "train_minibatch_logic": "examples/custom_logic/advanced_custom_logic.py"
+  },
+  "model_ops": {
+    "name": "mnist_net",
+    "params": {
+      "num_classes": 10,
+      "hidden_size": 128
+    }
+  },
+  "penalty_ops": {
+    "name": "label_smoothing",
+    "params": {
+      "smoothing": 0.1
+    }
+  },
+  "control_ops": {
+    "name": "radam",
+    "params": {
+      "lr": 0.002,
+      "weight_decay": 0.001
+    }
+  },
+  "schedule_ops": {
+    "name": "reduce_lr_on_plateau",
+    "params": {
+      "mode": "min",
+      "factor": 0.5,
+      "patience": 3,
+      "threshold": 0.001
+    }
+  },
+  "train_ops": {
+    "name": "classification",
+    "params": {
+      "max_epochs": 8,
+      "early_stopping_patience": 4,
+      "save_best_model": true,
+      "log_interval": 25,
+      "gradient_clipping": 0.5
+    }
+  },
+  "audit_ops": {
+    "name": "classification",
+    "params": {
+      "metrics": ["accuracy", "precision", "recall", "f1"]
+    }
+  },
+  "output_dir": "outputs/toy_experiment",
+  "save_model": true
+}

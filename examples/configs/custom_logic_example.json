@@ -1,0 +1,62 @@
+{
+  "name": "mnist_custom_logic_example",
+  "seed": 42,
+  "device": "auto",
+  "data_ops": {
+    "name": "mnist",
+    "params": {
+      "batch_size": 64,
+      "num_workers": 2,
+      "download": true,
+      "data_dir": "./data"
+    },
+    "train_minibatch_logic": "examples/custom_logic/custom_minibatch.py",
+    "val_minibatch_logic": "examples/custom_logic/custom_minibatch.py"
+  },
+  "model_ops": {
+    "name": "mnist_net",
+    "params": {
+      "num_classes": 10,
+      "hidden_size": 256
+    }
+  },
+  "penalty_ops": {
+    "name": "focal_loss",
+    "params": {
+      "alpha": 1.0,
+      "gamma": 2.0
+    }
+  },
+  "control_ops": {
+    "name": "adamw",
+    "params": {
+      "lr": 0.001,
+      "weight_decay": 0.01
+    }
+  },
+  "schedule_ops": {
+    "name": "cosine_annealing_lr",
+    "params": {
+      "T_max": 10,
+      "eta_min": 0.0001
+    }
+  },
+  "train_ops": {
+    "name": "classification",
+    "params": {
+      "max_epochs": 10,
+      "early_stopping_patience": 5,
+      "save_best_model": true,
+      "log_interval": 50,
+      "gradient_clipping": 1.0
+    }
+  },
+  "audit_ops": {
+    "name": "classification",
+    "params": {
+      "metrics": ["accuracy", "precision", "recall", "f1", "confusion_matrix"]
+    }
+  },
+  "output_dir": "outputs/custom_logic_example",
+  "save_model": true
+}

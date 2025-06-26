@@ -1,0 +1,47 @@
+{
+  "name": "mnist_classification_example",
+  "seed": 42,
+  "device": "auto",
+  "data_ops": {
+    "name": "mnist",
+    "params": {
+      "batch_size": 64,
+      "num_workers": 2,
+      "download": true,
+      "data_dir": "./data"
+    }
+  },
+  "model_ops": {
+    "name": "mnist_net",
+    "params": {
+      "num_classes": 10
+    }
+  },
+  "penalty_ops": {
+    "name": "cross_entropy",
+    "params": {}
+  },
+  "control_ops": {
+    "name": "adam",
+    "params": {
+      "lr": 0.001
+    }
+  },
+  "train_ops": {
+    "name": "classification",
+    "params": {
+      "max_epochs": 10,
+      "early_stopping_patience": 3,
+      "save_best_model": true,
+      "log_interval": 100
+    }
+  },
+  "audit_ops": {
+    "name": "classification",
+    "params": {
+      "metrics": ["accuracy", "f1"]
+    }
+  },
+  "output_dir": "outputs/mnist_example",
+  "save_model": true
+}

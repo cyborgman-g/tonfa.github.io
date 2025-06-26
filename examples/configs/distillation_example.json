@@ -1,0 +1,60 @@
+{
+  "name": "cifar10_distillation_example",
+  "seed": 42,
+  "device": "auto",
+  "data_ops": {
+    "name": "cifar10",
+    "params": {
+      "batch_size": 128,
+      "num_workers": 4,
+      "download": true,
+      "data_dir": "./data"
+    }
+  },
+  "teacher_model_ops": {
+    "name": "resnet18",
+    "params": {
+      "num_classes": 10,
+      "in_channels": 3
+    }
+  },
+  "student_model_ops": {
+    "name": "simple_convnet",
+    "params": {
+      "num_classes": 10,
+      "channels": [16, 32, 64]
+    }
+  },
+  "distillation_penalty_ops": {
+    "name": "knowledge_distillation",
+    "params": {
+      "temperature": 4.0,
+      "alpha": 0.5
+    }
+  },
+  "control_ops": {
+    "name": "adam",
+    "params": {
+      "lr": 0.001,
+      "weight_decay": 0.0001
+    }
+  },
+  "train_ops": {
+    "name": "distillation",
+    "params": {
+      "max_epochs": 15,
+      "early_stopping_patience": 5,
+      "save_best_model": true,
+      "log_interval": 50
+    }
+  },
+  "audit_ops": {
+    "name": "distillation",
+    "params": {
+      "metrics": ["accuracy", "precision", "recall", "f1"],
+      "compute_agreement": true
+    }
+  },
+  "output_dir": "outputs/distillation_example",
+  "save_model": true
+}

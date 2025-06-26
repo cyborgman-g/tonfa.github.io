@@ -1,0 +1,49 @@
+{
+  "name": "cifar10_classification_example",
+  "seed": 42,
+  "device": "auto",
+  "data_ops": {
+    "name": "cifar10",
+    "params": {
+      "batch_size": 128,
+      "num_workers": 4,
+      "download": true,
+      "data_dir": "./data"
+    }
+  },
+  "model_ops": {
+    "name": "simple_convnet",
+    "params": {
+      "num_classes": 10,
+      "channels": [32, 64, 128]
+    }
+  },
+  "penalty_ops": {
+    "name": "cross_entropy",
+    "params": {}
+  },
+  "control_ops": {
+    "name": "adam",
+    "params": {
+      "lr": 0.001,
+      "weight_decay": 0.0001
+    }
+  },
+  "train_ops": {
+    "name": "classification",
+    "params": {
+      "max_epochs": 20,
+      "early_stopping_patience": 5,
+      "save_best_model": true,
+      "log_interval": 50
+    }
+  },
+  "audit_ops": {
+    "name": "classification",
+    "params": {
+      "metrics": ["accuracy", "precision", "recall", "f1"]
+    }
+  },
+  "output_dir": "outputs/classification_example",
+  "save_model": true
+}
